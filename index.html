@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
-  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+        content="Dense Reward Generation For Robot Learning">
+  <meta name="keywords" content="Robot Learning, Large Langauge Model, Code Generation">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nerfies: Deformable Neural Radiance Fields</title>
+  <title>Dense Reward Generation For Robot Learning</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -32,7 +32,7 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
+  <link rel="icon" href="./static/images/franka.png">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -52,7 +52,7 @@
   </div>
   <div class="navbar-menu">
     <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
+      <a class="navbar-item" href="https://www.xlang.ai/">
       <span class="icon">
           <i class="fas fa-home"></i>
       </span>
@@ -63,17 +63,26 @@
           More Research
         </a>
         <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
+          <a class="navbar-item" href="https://yale-lily.github.io/spider">
+            Spider
           </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
+          <a class="navbar-item" href="https://github.com/HKUNLP/UnifiedSKG">
+            UnifiedSKG
           </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
+          <a class="navbar-item" href="https://github.com/Yushi-Hu/IC-DST">
+            IC-DST
           </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
+          <a class="navbar-item" href="https://github.com/HKUNLP/icl-selective-annotation">
+            Selective Annotation
+          </a>
+          <a class="navbar-item" href="https://ds1000-code-gen.github.io/">
+            DS-1000
+          </a>
+          <a class="navbar-item" href="https://instructor-embedding.github.io/">
+            Instructor
+          </a>
+          <a class="navbar-item" href="https://lm-code-binder.github.io/">
+            Binder
           </a>
         </div>
       </div>
@@ -88,68 +97,31 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Nerfies: Deformable Neural Radiance Fields</h1>
+          <h1 class="title is-1 publication-title">Dense Reward Generation For Robot Learning</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
-            <span class="author-block">
-              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
-            <span class="author-block">
-              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
-            </span>
+              <a href="https://www.xlang.ai/">Anonymous authors</a><sup>1</sup>,</span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Washington,</span>
-            <span class="author-block"><sup>2</sup>Google Research</span>
+            <span class="author-block"><sup>1</sup>The University of Hong Kong</span>
+            <!-- <span class="author-block"><sup>2</sup>The University of Hong Kong</span> -->
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
-              <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2011.12948"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="https://arxiv.org/abs/2011.12948"
+                <a href="https://www.xlang.ai/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
                   </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-              <!-- Video Link. -->
-              <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
+                  <span>Paper</span>
                 </a>
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies"
+                <a href="https://www.xlang.ai/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -157,15 +129,26 @@
                   <span>Code</span>
                   </a>
               </span>
-              <!-- Dataset Link. -->
+              <!-- Twitter Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                <a href="https://www.xlang.ai/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                      <i class="far fa-images"></i>
+                      <i class="fab fa-twitter"></i>
                   </span>
-                  <span>Data</span>
+                  <span>Twitter</span>
                   </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://www.xlang.ai/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
             </div>
 
           </div>
@@ -178,77 +161,13 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
-                type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
-      </h2>
+      <!-- <h2 class="subtitle has-text-centered">
+        <span class="dnerf">Binder</span> is a training-free neural-symbolic framework that maps the task input to an executable <span class="dnerf">Binder</span> program that (1) allows binding API calls to GPT-3 Codex into SQL/Python, (2) is executed with SQL/Python Interpreter + GPT-3 Codex to derive the answer.
+      </h2> -->
+      <img src="static/images/main.png"> <!-- To .gif format-->
     </div>
   </div>
 </section>
-
-
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -258,45 +177,29 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
+            Large language models (LLMs) have been shown to be useful planners for robotics, but they may lack low-level skills for execution. On the other hand, reinforcement learning (RL) can learn low-level skills just from rewards, while the sensitivity and efficiency of RL training have made reward design notoriously laborious. In this work, we propose a novel framework, <span class="dnerf">Text2Reward</span>, to incorporate LLMs into robot learning. Given a language goal, <span class="dnerf">Text2Reward</span> generates <em>free-form, dense</em> reward codes for RL training <em>interactively</em> with human feedback. In this framework, users require no foundational knowledge of robotics or programming. Instead, they are only mandated to delineate the objective and offer feedback on the robot's execution, all in natural language. Different from hand-crafted APIs, our free-form dense reward is highly expressive and thus can generalize to novel tasks and utilize available tools (e.g. NumPy operations point clouds from a depth camera). We systematically evaluate our framework on two manipulation benchmarks (<span class="dnerf">ManiSkill2</span>, <span class="dnerf">MetaWorld</span>) and two locomotion environments of <span class="dnerf">MuJoCo</span>. The results show that the performance of RL policies trained with generated reward codes can match that of ground truth reward codes carefully tuned by human experts with heavy effort, as well as performing novel tasks. We demonstrate that the trained policy can be deployed on a real Franka Panda robot. With human feedback, our method can iteratively improve the learned policy and eliminate ambiguity.
           </p>
-          <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
-          </p>
+          <!-- Compare <span class="dnerf">Binder</span> with:
+        <ul>
+          <li><strong>End2end & Chain-of-Thought:</strong> &nbsp More interpretable and robust!
+            <br><span class="dnerf">Binder</span> program is deterministically executed to entail the prediction/answer. </li>
+          <li><strong>Semantic Parsing & Code Generation:</strong> &nbsp Higher grammar coverage!
+            <br><span class="dnerf">Binder</span> injects Codex functionalities into SQL/Python to handle more diverse questions. </li>
+          <li><strong>Neural-symbolic Approach:</strong> &nbsp More general (domains), training-free, few annotations!
+            <br><span class="dnerf">Binder</span> is based on general programming languages (SQL/Python), and requires only a dozens in-context exemplar annotations. </li>
+        </ul> -->
         </div>
       </div>
     </div>
+  </div>
     <!--/ Abstract. -->
-
-    <!-- Paper video. -->
+<!-- Paper video. -->
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+      <div class="column is-three-fifths">
         <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
+        <!-- <div class="publication-video">
+          <iframe src="https://player.vimeo.com/video/760302884?h=61a3fa5973" width="640" height="400" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        </div> -->
       </div>
     </div>
     <!--/ Paper video. -->
@@ -304,151 +207,104 @@
 </section>
 
 
+
 <section class="section">
   <div class="container is-max-desktop">
-
-    <div class="columns is-centered">
-
-      <!-- Visual Effects. -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
-          <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
-          </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <div class="column">
-        <h2 class="title is-3">Matting</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
-            </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
+    <!-- Overview. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Overview</h2>
+        <div class="content has-text-justified">
+          <!-- <p>
+            <span class="dnerf">Binder</span> first prompts Codex to parse a question input into a <span class="dnerf">Binder</span> program, in which Codex has to decide (1) which parts in the input can be converted to the target programming language (<span style="color:dimgrey;">grey clause</span> in figure), (2) the corresponding task API calls (<span style="color: royalblue">blue clause</span> in figure) to prompt Codex to resolve the other parts, and (3) where to insert the API calls in the <span class="dnerf">Binder</span> program.
+            Next, <span class="dnerf">Binder</span> prompts Codex again to generate answers to the task API calls (given the generated task prompts), integrates the generated results back to the programming language, and executes the resulting programming language expression to derive the final answer.
+            In this way, <span class="dnerf">Binder</span> enables flexible functionality integration to the programming language to improve its grammar coverage while requiring only few-shot exemplar annotations.
+          </p> -->
         </div>
       </div>
     </div>
-    <!--/ Matting. -->
-
-    <!-- Animation. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
-
-        <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolating states</h3>
-        <div class="content has-text-justified">
-          <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
-          </p>
-        </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_start.jpg"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
-          </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
-            </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_end.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
-          </div>
-        </div>
-        <br/>
-        <!--/ Interpolating. -->
-
-        <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
-        <div class="content has-text-justified">
-          <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
-          </p>
-        </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/replay.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <!--/ Re-rendering. -->
-
-      </div>
-    </div>
-    <!--/ Animation. -->
-
-
-    <!-- Concurrent Work. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
-
-        <div class="content has-text-justified">
-          <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
-          </p>
-          <p>
-            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
-          </p>
-          <p>
-            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
-            both use deformation fields to model non-rigid scenes.
-          </p>
-          <p>
-            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
-          </p>
-          <p>
-            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--/ Concurrent Work. -->
-
+    <img src="static/images/method.png"> <!-- To .gif format-->
   </div>
+    <!--/ Overview. -->
+
 </section>
 
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Results. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Results</h2>
+        <div class="content has-text-justified">
+          <!-- <p>
+            <span class="dnerf">Binder</span> framework achieves <strong>SOTA</strong> or comparable performance with only <strong>dozens of</strong> program annotations <strong>without training</strong> on three benchmarks!
+          </p>
+          <ul>
+            <li>SOTA on <a href="https://ppasupat.github.io/WikiTableQuestions/">WikiTableQuestions</a>.</li>
+            <li>SOTA on <a href="https://tabfact.github.io/">TabFact</a>.</li>
+            <li>Comparable to SOTA on <a href="https://allenai.github.io/multimodalqa/">MultiModalQA</a>. </li>
+          </ul>
+          <img src="static/images/exp_results.png">
+          <p>
+              Further, <span class="dnerf">Binder</span> is much more robust to large or noisy inputs than the end-to-end manner.
+          </p>
+          <img src="static/images/analysis.png"> -->
+        </div>
+      </div>
+    </div>
+  </div>
+    <!--/ Results. -->
+
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Examples. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3"><span class="dnerf">Text2Reward</span> Reward Code Samples</h2>
+      </div>
+    </div>
+    <!-- <img src="static/images/examples.png"> -->
+
+  </div>
+    <!--/ Examples. -->
+</section>
+
+<!-- <section class="section">
+  <div class="container is-max-desktop">
+    Copy our prompt from <a href="https://github.com/HKUNLP/Binder/blob/main/templates/prompts/wikitq_binder.txt">here</a> with your input (table, question etc.) on <a href="https://beta.openai.com/playground">OpenAI Playground</a> to generate Binder program by yourself!
+  </div>
+</section> -->
+  
+
+<!-- <iframe
+src="https://hkunlp-binder.hf.space"
+frameborder="0"
+width="850"
+height="450"
+/> -->
+
+
+
+<!-- <section class="section">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Acknowledgement</h2>
+   We thank <a href="https://dpfried.github.io/">Daniel Fried</a>, <a href="https://hongjin-su.github.io/">Hongjin Su</a>, <a href="https://github.com/ChenWu98">Chen Henry Wu</a>, <a href="https://ryanzhumich.github.io/">Rui Zhang</a>, <a href="https://berlino.github.io/">Bailin Wang</a>, <a href="https://pcyin.me/">Pengcheng Yin</a>, <a href="https://homes.cs.washington.edu/~yizhongw/">Yizhong Wang</a>, <a href="https://weijia-shi.netlify.app/">Weijia Shi</a> for their helpful feedback on this work.
+  </div>
+</section> -->
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
+    <pre><code>@article{Text2Reward,
+  title={Dense Reward Generation For Robot Learning},
+  author={},
+  journal={},
+  year={}
 }</code></pre>
   </div>
 </section>
@@ -458,10 +314,10 @@
   <div class="container">
     <div class="content has-text-centered">
       <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
+         href="https://www.xlang.ai/">
         <i class="fas fa-file-pdf"></i>
       </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+      <a class="icon-link" href="https://www.xlang.ai/" class="external-link" disabled>
         <i class="fab fa-github"></i>
       </a>
     </div>
