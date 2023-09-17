@@ -175,7 +175,7 @@
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <h3 class="title is-3">Abstract</h3>
         <div class="content has-text-justified">
           <p>
             Designing suitable reward functions is a longstanding challenge in reinforcement learning (RL), necessitating specialized knowledge or domain data, and entails high costs for development and collection. To address this, we introduce <span class="dnerf">Text2Reward</span>, a data-free framework that automates the generation of dense reward functions using large language models (LLMs). Given a goal described in natural language, <span class="dnerf">Text2Reward</span> utilizes LLMs to generate dense reward functions in the form of executable programs grounded in a compact representation of the environment. Different from inverse RL and recent work that use LLMs to write sparse reward codes, <span class="dnerf">Text2Reward</span> produces interpretable dense reward functions that can cover a wide range of tasks, utilizes existing software packages (e.g. NumPy), and allows iterative generation with human feedback. We show the performance of <span class="dnerf">Text2Reward</span> on two robotic manipulation benchmarks (<span class="dnerf">ManiSkill2</span>, <span class="dnerf">MetaWorld</span>) and two locomotion environments of <span class="dnerf">MuJoCo</span>. On 13 out of 16 manipulation tasks, RL policies trained with our generated reward functions achieve similar or better task success rate and convergence speed compared to policies trained on expert-written reward functions. For locomotion tasks, our method demonstrates success in learning 6 novel locomotion behaviors with a policy success rate exceeding 94%. In addition, we show that policies trained in the simulator with our method can be deployed in the real world. Finally, we further improve policies by refining their reward functions with human feedback.
@@ -197,7 +197,8 @@
 <!-- Paper video. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-three-fifths">
-        <h2 class="title is-3">Video</h2>
+        <h3 class="title is-3">Video</h3>
+        <p>Coming soon!</p>
         <!-- <div class="publication-video">
           <iframe src="https://player.vimeo.com/video/760302884?h=61a3fa5973" width="640" height="400" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
         </div> -->
@@ -214,238 +215,230 @@
     <!-- Results. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Results</h2>
+        <h3 class="title is-3">Results</h3>
         <div class="content has-text-justified">
-          <!-- <p>
-            <span class="dnerf">Binder</span> framework achieves <strong>SOTA</strong> or comparable performance with only <strong>dozens of</strong> program annotations <strong>without training</strong> on three benchmarks!
+          <p>
+            We conduct systematic experiments on
           </p>
           <ul>
-            <li>SOTA on <a href="https://ppasupat.github.io/WikiTableQuestions/">WikiTableQuestions</a>.</li>
-            <li>SOTA on <a href="https://tabfact.github.io/">TabFact</a>.</li>
-            <li>Comparable to SOTA on <a href="https://allenai.github.io/multimodalqa/">MultiModalQA</a>. </li>
+            <li>two robotics manipulation benchmarks <span class="dnerf">ManiSkill2</span> and <span class="dnerf">MetaWorld</span></li>
+            <li>two locomotion environments (Hopper and Ant) of <span class="dnerf">MuJoCo</span></li>
+            <li>two tasks (PickCube and StackCube) on a real 7-DoF Franka Panda robot</li>
           </ul>
-          <img src="static/images/exp_results.png">
-          <p>
-              Further, <span class="dnerf">Binder</span> is much more robust to large or noisy inputs than the end-to-end manner.
+          <h4 class="title is-4" align="left">Manipulation</h4>
+          <p> <strong><span class="dnerf">Text2Reward</span> &#8776 expert-designed rewards on manipulation tasks.</strong> On 13 of the 16 tasks, the final performance (i.e., success rate after convergence and convergence speed) of <span class="dnerf">Text2Reward</span> achieves comparable results to the human oracle. 
+            Surprisingly, on 4 of the 16 tasks, zero-shot and few-shot <span class="dnerf">Text2Reward</span> can even outperform human oracle, in terms of either the convergence speed (e.g., Open Cabinet Door in <span class="dnerf">ManiSkill2</span>, Handle Press in <span class="dnerf">MetaWorld</span>) or the success rate (e.g., Pick Cube in <span class="dnerf">ManiSkill2</span>, Drawer Open in <span class="dnerf">MetaWorld</span>).
           </p>
-          <img src="static/images/analysis.png"> -->
           <img src="static/images/maniskill.png">
-    <img src="static/images/metaworld.png">
-    <img src="static/images/interactive1.png">
-    <img src="static/images/interactive2.png">
-        </div>
-      </div>
-    </div>
-  </div>
-    <!--/ Results. -->
-</section>
+          <p></p>
+          <img src="static/images/metaworld.png">
+          <p></p>
 
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-pickcube">
-          <video poster="" id="pickcube" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/pickcube.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-turnfaucet">
-          <video poster="" id="turnfaucet" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/turnfaucet.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-opendoor">
-          <video poster="" id="opendoor" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/opendoor.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-opendrawer">
-          <video poster="" id="opendrawer" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/opendrawer.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-buttonpress">
-          <video poster="" id="buttonpress" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/button-press.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-doorclose">
-          <video poster="" id="doorclose" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/door-close.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-draweropen">
-          <video poster="" id="draweropen" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/drawer-open.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-drawerclose">
-          <video poster="" id="drawerclose" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/drawer-close.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-sweepinto">
-          <video poster="" id="sweepinto" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/sweep-into.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-windowclose">
-          <video poster="" id="windowclose" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/window-close.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-windowopen">
-          <video poster="" id="windowopen" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/window-open.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container is-max-desktop">
-
-    <div class="columns is-centered">
-
-      <!-- Visual Effects. -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Zero-shot Push Chair</h2>
-          <!-- <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
-          </p> -->
-          <video id="zeroshot-video" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/zeroshot-PushChair.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <div class="column">
-        <h2 class="title is-3">Few-shot Push Chair</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <!-- <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
-            </p> -->
-            <video id="fewshot-video" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/fewshot-PushChair.mp4"
-                      type="video/mp4">
-            </video>
+          <section class="hero is-light is-small">
+            <div class="hero-body">
+              <div class="container">
+                <div id="results-carousel" class="carousel results-carousel">
+                  <div class="item item-pickcube">
+                    <video poster="" id="pickcube" autoplay controls muted loop playsinline height="100%">
+                      <source src="./static/videos/pickcube.mp4"
+                              type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="item item-turnfaucet">
+                    <video poster="" id="turnfaucet" autoplay controls muted loop playsinline height="100%">
+                      <source src="./static/videos/turnfaucet.mp4"
+                              type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="item item-opendoor">
+                    <video poster="" id="opendoor" autoplay controls muted loop playsinline height="100%">
+                      <source src="./static/videos/opendoor.mp4"
+                              type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="item item-opendrawer">
+                    <video poster="" id="opendrawer" autoplay controls muted loop playsinline height="100%">
+                      <source src="./static/videos/opendrawer.mp4"
+                              type="video/mp4">
+                    </video>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="hero is-light is-small">
+            <div class="hero-body">
+              <div class="container">
+                <div id="results-carousel" class="carousel results-carousel">
+                  <div class="item item-buttonpress">
+                    <video poster="" id="buttonpress" autoplay controls muted loop playsinline height="100%">
+                      <source src="./static/videos/button-press.mp4"
+                              type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="item item-doorclose">
+                    <video poster="" id="doorclose" autoplay controls muted loop playsinline height="100%">
+                      <source src="./static/videos/door-close.mp4"
+                              type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="item item-draweropen">
+                    <video poster="" id="draweropen" autoplay controls muted loop playsinline height="100%">
+                      <source src="./static/videos/drawer-open.mp4"
+                              type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="item item-drawerclose">
+                    <video poster="" id="drawerclose" autoplay controls muted loop playsinline height="100%">
+                      <source src="./static/videos/drawer-close.mp4"
+                              type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="item item-sweepinto">
+                    <video poster="" id="sweepinto" autoplay controls muted loop playsinline height="100%">
+                      <source src="./static/videos/sweep-into.mp4"
+                              type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="item item-windowclose">
+                    <video poster="" id="windowclose" autoplay controls muted loop playsinline height="100%">
+                      <source src="./static/videos/window-close.mp4"
+                              type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="item item-windowopen">
+                    <video poster="" id="windowopen" autoplay controls muted loop playsinline height="100%">
+                      <source src="./static/videos/window-open.mp4"
+                              type="video/mp4">
+                    </video>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <p></p>
+          <p>Furthermore, as illustrated in Figure 2, the <span class="dnerf">ManiSkill2</span> data reveals that on 2 of the 6 tasks that are not fully solvable, the few-shot paradigm markedly outperforms the zero-shot approach.</p>
+          <div class="columns is-centered">
+            <!-- Visual Effects. -->
+            <div class="column">
+              <div class="content">
+                <h6 class="title is-6">Zero-shot Push Chair</h6>
+                <!-- <p>
+                  Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
+                  would be impossible without nerfies since it would require going through a wall.
+                </p> -->
+                <video id="zeroshot-video" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/zeroshot-PushChair.mp4"
+                          type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="column">
+              <h6 class="title is-6">Few-shot Push Chair</h6>
+              <div class="columns is-centered">
+                <div class="column content">
+                  <!-- <p>
+                    As a byproduct of our method, we can also solve the matting problem by ignoring
+                    samples that fall outside of a bounding box during rendering.
+                  </p> -->
+                  <video id="fewshot-video" autoplay controls muted loop playsinline height="100%">
+                    <source src="./static/videos/fewshot-PushChair.mp4"
+                            type="video/mp4">
+                  </video>
+                </div>
+              </div>
+            </div>
           </div>
 
+          <h4 class="title is-4" align="left">Locomotion</h4>
+          <p><strong><span class="dnerf">Text2Reward</span> can learn novel locomotion behaviors.</strong> Table 1 shows the success rate of all six tasks trained with the reward generated under the zero-shot setting.</p>
+          <section class="hero is-light is-small">
+            <div class="hero-body">
+              <div class="container">
+                <div id="results-carousel" class="carousel results-carousel">
+                  <div class="item item-backflip">
+                    <video poster="" id="backflip" autoplay controls muted loop playsinline height="100%">
+                      <source src="./static/videos/backflip.mp4"
+                              type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="item item-frontflip">
+                    <video poster="" id="frontflip" autoplay controls muted loop playsinline height="100%">
+                      <source src="./static/videos/frontflip.mp4"
+                              type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="item item-hoppermove">
+                    <video poster="" id="hoppermove" autoplay controls muted loop playsinline height="100%">
+                      <source src="./static/videos/hopper-move.mp4"
+                              type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="item item-liedown">
+                    <video poster="" id="liedown" autoplay controls muted loop playsinline height="100%">
+                      <source src="./static/videos/liedown.mp4"
+                              type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="item item-swing">
+                    <video poster="" id="swing" autoplay controls muted loop playsinline height="100%">
+                      <source src="./static/videos/swing.mp4"
+                              type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="item item-antmove">
+                    <video poster="" id="antmove" autoplay controls muted loop playsinline height="100%">
+                      <source src="./static/videos/ant-move.mp4"
+                              type="video/mp4">
+                    </video>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+          <p></p>
+          <h4 class="title is-4" align="left">Real Robot</h4>
+          <p>The RL policy trained in the simulator using dense reward function generated from <span class="dnerf">Text2Reward</span> can be successfully deployed to the real world.</p>
+          <section class="hero is-light is-small">
+            <div class="hero-body">
+              <div class="container">
+                <div id="results-carousel" class="carousel results-carousel">
+                  <div class="item item-realstack1">
+                    <video poster="" id="realstack1" autoplay controls muted loop playsinline height="100%">
+                      <source src="./static/videos/real-stack1.mp4"
+                              type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="item item-realstack2">
+                    <video poster="" id="realstack2" autoplay controls muted loop playsinline height="100%">
+                      <source src="./static/videos/real-stack2.mp4"
+                              type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="item item-realpick1">
+                    <video poster="" id="realpick1" autoplay controls muted loop playsinline height="100%">
+                      <source src="./static/videos/real-pick1.mp4"
+                              type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="item item-realpick2">
+                    <video poster="" id="realpick2" autoplay controls muted loop playsinline height="100%">
+                      <source src="./static/videos/real-pick2.mp4"
+                              type="video/mp4">
+                    </video>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
         </div>
       </div>
     </div>
-    <!--/ Matting. -->
-
   </div>
 </section>
 
-
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-backflip">
-          <video poster="" id="backflip" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/backflip.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-frontflip">
-          <video poster="" id="frontflip" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/frontflip.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-hoppermove">
-          <video poster="" id="hoppermove" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/hopper-move.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-liedown">
-          <video poster="" id="liedown" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/liedown.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-swing">
-          <video poster="" id="swing" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/swing.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-antmove">
-          <video poster="" id="antmove" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/ant-move.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-realstack1">
-          <video poster="" id="realstack1" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/real-stack1.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-realstack2">
-          <video poster="" id="realstack2" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/real-stack2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-realpick1">
-          <video poster="" id="realpick1" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/real-pick1.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-realpick2">
-          <video poster="" id="realpick2" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/real-pick2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 
 <section class="section">
@@ -453,7 +446,7 @@
     <!-- Examples. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3"><span class="dnerf">Text2Reward</span> Reward Code Samples</h2>
+        <h3 class="title is-3"><span class="dnerf">Text2Reward</span> Reward Code Samples</h3>
       </div>
     </div>
     <!-- <img src="static/images/examples.png"> -->
