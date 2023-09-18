@@ -6,7 +6,7 @@
         content="Dense Reward Generation For Robot Learning">
   <meta name="keywords" content="Robot Learning, Large Langauge Model, Code Generation">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Interactive Instruction to Dense Reward for Reinforcement Learning</title>
+  <title>Text2Reward: Automated Dense Reward Function Generation for Reinforcement Learning</title>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
   <script>
@@ -96,7 +96,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Interactive Instruction to Dense Reward for Reinforcement Learning</h1>
+          <h1 class="title is-1 publication-title">Text2Reward: Automated Dense Reward Function Generation for Reinforcement Learning</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://www.xlang.ai/">Anonymous authors</a><sup>1</sup>,</span>
@@ -238,38 +238,14 @@
             <div class="hero-body">
               <div class="container">
                 <div id="results-carousel" class="carousel results-carousel">
-                  <div class="item item-pickcube">
-                    <video poster="" id="pickcube" autoplay controls muted loop playsinline height="100%">
-                      <source src="./static/videos/pickcube.mp4"
-                              type="video/mp4">
-                    </video>
-                  </div>
-                  <div class="item item-turnfaucet">
-                    <video poster="" id="turnfaucet" autoplay controls muted loop playsinline height="100%">
-                      <source src="./static/videos/turnfaucet.mp4"
-                              type="video/mp4">
-                    </video>
-                  </div>
-                  <div class="item item-opendoor">
-                    <video poster="" id="opendoor" autoplay controls muted loop playsinline height="100%">
-                      <source src="./static/videos/opendoor.mp4"
-                              type="video/mp4">
-                    </video>
-                  </div>
+
                   <div class="item item-opendrawer">
                     <video poster="" id="opendrawer" autoplay controls muted loop playsinline height="100%">
                       <source src="./static/videos/opendrawer.mp4"
                               type="video/mp4">
                     </video>
                   </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section class="hero is-light is-small">
-            <div class="hero-body">
-              <div class="container">
-                <div id="results-carousel" class="carousel results-carousel">
+
                   <div class="item item-buttonpress">
                     <video poster="" id="buttonpress" autoplay controls muted loop playsinline height="100%">
                       <source src="./static/videos/button-press.mp4"
@@ -312,6 +288,26 @@
                               type="video/mp4">
                     </video>
                   </div>
+
+                  <div class="item item-pickcube">
+                    <video poster="" id="pickcube" autoplay controls muted loop playsinline height="100%">
+                      <source src="./static/videos/pickcube.mp4"
+                              type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="item item-turnfaucet">
+                    <video poster="" id="turnfaucet" autoplay controls muted loop playsinline height="100%">
+                      <source src="./static/videos/turnfaucet.mp4"
+                              type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="item item-opendoor">
+                    <video poster="" id="opendoor" autoplay controls muted loop playsinline height="100%">
+                      <source src="./static/videos/opendoor.mp4"
+                              type="video/mp4">
+                    </video>
+                  </div>
+
                 </div>
               </div>
             </div>
@@ -399,7 +395,7 @@
           
           <p></p>
           <h4 class="title is-4" align="left">Real Robot</h4>
-          <p>The RL policy trained in the simulator using dense reward function generated from <span class="dnerf">Text2Reward</span> can be successfully deployed to the real world.</p>
+          <p><strong><span class="dnerf">Text2Reward</span> &#8594; real robot.</strong> The RL policy trained in the simulator using dense reward function generated from <span class="dnerf">Text2Reward</span> can be successfully deployed to the real world.</p>
           <section class="hero is-light is-small">
             <div class="hero-body">
               <div class="container">
@@ -432,13 +428,45 @@
               </div>
             </div>
           </section>
-
         </div>
       </div>
     </div>
   </div>
 </section>
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Results. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h3 class="title is-3">Interactive Results</h3>
+        <div class="content has-text-justified">
+          <p>
+            <strong><span class="dnerf">Text2Reward</span> can resolve ambiguity from human feedback.</strong> 
+            We show one case in which "control the Ant to lie down" itself has ambiguity in terms of the orientation of the Ant, as shown in Figure 6. 
+            After observing the training result of this instruction, the user can give the feedback in natural language, e.g., "the Ant's torso should be top down, not bottom up". 
+            Then <span class="dnerf">Text2Reward</span> will regenerate the reward code and train a new policy, which successfully caters to the user's intent.
+          </p>
+          <p></p>
+          <img src="static/images/interactive1.png">
+          <p></p>
+          
+
+          <p>
+            <strong><span class="dnerf">Text2Reward</span> can improve RL training from human feedback.</strong>  
+            Sometimes single-turn generation can not generate good enough reward functions to finish the task. 
+            In these cases, <span class="dnerf">Text2Reward</span> asks for human feedback on the failure mode and tries to improve the dense reward. 
+            In Figure 7, we demonstrate this on the Stack Cube task, where zero-shot and few-shot generation in a single turn fails to solve the task stably. 
+            For few-shot generation, we observed that interactive code generation with human feedback can improve the success rate from zero to one.
+          </p>
+          <p></p>
+          <img src="static/images/interactive2.png">
+          <p></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 <section class="section">
@@ -482,10 +510,10 @@ height="450"
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>@article{Text2Reward,
-  title={Dense Reward Generation For Robot Learning},
+  title={Text2Reward: Automated Dense Reward Function Generation for Reinforcement Learning},
   author={},
-  journal={},
-  year={}
+  journal={arXiv},
+  year={2023}
 }</code></pre>
   </div>
 </section>
