@@ -184,6 +184,12 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
+      <h2 class="subtitle has-text-centered">
+        An overview of <span class="dnerf">Text2Reward</span> of three stages: <br>
+        <em><font color="#228B22">Expert</font> Abstraction</em> provides an abstraction of the environment as a hierarchy of Pythonic classes. <br>
+        <em><font color="#4169E1">User</font> Instruction</em> describes the goal to be achieved in natural language.
+        <em><font color="#4169E1">User</font> Feedback</em> allows users to summarize the failure mode or their preferences, which are used to improve the reward code.
+      </h2>
       <img src="static/images/main.png"> <!-- To .gif format-->
     </div>
   </div>
@@ -329,7 +335,8 @@
             <!-- Visual Effects. -->
             <div class="column">
               <div class="content">
-                <h6 class="title is-6">Zero-shot Push Chair</h6>
+                <h6 class="title is-6">Push Chair (zero-shot)</h6>
+                <p><font color="red">Fail ❌</font></p>
                 <video id="zeroshot-video" autoplay controls muted loop playsinline height="100%">
                   <source src="./static/videos/zeroshot-PushChair.mp4"
                           type="video/mp4">
@@ -337,7 +344,8 @@
               </div>
             </div>
             <div class="column">
-              <h6 class="title is-6">Few-shot Push Chair</h6>
+              <h6 class="title is-6">Push Chair (few-shot)</h6>
+              <p><font color="green">Succeed ✅</font></p>
               <div class="columns is-centered">
                 <div class="column content">
                   <video id="fewshot-video" autoplay controls muted loop playsinline height="100%">
