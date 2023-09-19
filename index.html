@@ -99,12 +99,34 @@
           <h1 class="title is-1 publication-title">Text2Reward: Automated Dense Reward Function Generation for Reinforcement Learning</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://www.xlang.ai/">Anonymous authors</a><sup>1</sup>,</span>
+              <a href="https://tianbaoxie.com/">Tianbao Xie*</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://hilbert-johnson.github.io/">Siheng Zhao*</a><sup>1,2</sup>,</span>
+            <span class="author-block">
+              <a href="https://chenwu.io/">Chen Henry Wu</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://yitaoliu17.com/">Yitao Liu</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://qianluo.netlify.app/">Qian Luo</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.victorzhong.com/">Victor Zhong</a><sup>4</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://yanchaoyang.github.io/">Yanchao Yang</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://taoyds.github.io/">Tao Yu</a><sup>1</sup>
+            </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>The University of Hong Kong</span>
-            <!-- <span class="author-block"><sup>2</sup>The University of Hong Kong</span> -->
+            <span class="author-block"><sup>1</sup>The University of Hong Kong,</span>
+            <span class="author-block"><sup>2</sup>Nanjing University,</span>
+            <span class="author-block"><sup>3</sup>Carnegie Mellon University,</span>
+            <span class="author-block"><sup>4</sup>Microsoft Research</span>
           </div>
 
           <div class="column has-text-centered">
@@ -129,7 +151,7 @@
                   </a>
               </span>
               <!-- Twitter Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://www.xlang.ai/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -137,9 +159,9 @@
                   </span>
                   <span>Twitter</span>
                   </a>
-              </span>
+              </span> -->
               <!-- Video Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://www.xlang.ai/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -147,7 +169,7 @@
                   </span>
                   <span>Video</span>
                 </a>
-              </span>
+              </span> -->
             </div>
 
           </div>
@@ -162,9 +184,6 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <!-- <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Binder</span> is a training-free neural-symbolic framework that maps the task input to an executable <span class="dnerf">Binder</span> program that (1) allows binding API calls to GPT-3 Codex into SQL/Python, (2) is executed with SQL/Python Interpreter + GPT-3 Codex to derive the answer.
-      </h2> -->
       <img src="static/images/main.png"> <!-- To .gif format-->
     </div>
   </div>
@@ -178,29 +197,21 @@
         <h3 class="title is-3">Abstract</h3>
         <div class="content has-text-justified">
           <p>
-            Designing suitable reward functions is a longstanding challenge in reinforcement learning (RL), necessitating specialized knowledge or domain data, and entails high costs for development and collection. To address this, we introduce <span class="dnerf">Text2Reward</span>, a data-free framework that automates the generation of dense reward functions using large language models (LLMs). Given a goal described in natural language, <span class="dnerf">Text2Reward</span> utilizes LLMs to generate dense reward functions in the form of executable programs grounded in a compact representation of the environment. Different from inverse RL and recent work that use LLMs to write sparse reward codes, <span class="dnerf">Text2Reward</span> produces interpretable dense reward functions that can cover a wide range of tasks, utilizes existing software packages (e.g. NumPy), and allows iterative generation with human feedback. We show the performance of <span class="dnerf">Text2Reward</span> on two robotic manipulation benchmarks (<span class="dnerf">ManiSkill2</span>, <span class="dnerf">MetaWorld</span>) and two locomotion environments of <span class="dnerf">MuJoCo</span>. On 13 out of 16 manipulation tasks, RL policies trained with our generated reward functions achieve similar or better task success rate and convergence speed compared to policies trained on expert-written reward functions. For locomotion tasks, our method demonstrates success in learning 6 novel locomotion behaviors with a policy success rate exceeding 94%. In addition, we show that policies trained in the simulator with our method can be deployed in the real world. Finally, we further improve policies by refining their reward functions with human feedback.
+            Designing reward functions is a longstanding challenge in reinforcement learning (RL); it requires specialized knowledge or domain data, leading to high costs for development. To address this, we introduce <span class="dnerf">Text2Reward</span>, a data-free framework that automates the generation of dense reward functions based on large language models (LLMs). Given a goal described in natural language, <span class="dnerf">Text2Reward</span> generates dense reward functions as an executable program grounded in a compact representation of the environment. Unlike inverse RL and recent work that uses LLMs to write sparse reward codes, <span class="dnerf">Text2Reward</span> produces interpretable, free-form dense reward codes that cover a wide range of tasks, utilize existing packages, and allow iterative refinement with human feedback. We evaluate <span class="dnerf">Text2Reward</span> on two robotic manipulation benchmarks (<span class="dnerf">ManiSkill2</span>, <span class="dnerf">MetaWorld</span>) and two locomotion environments of <span class="dnerf">MuJoCo</span>. On 13 of the 16 manipulation tasks, policies trained with generated reward codes achieve similar or better task success rates and convergence speed than expert-written reward codes. For locomotion tasks, our method learns six novel locomotion behaviors with a success rate exceeding 94%. Furthermore, we show that the policies trained in the simulator with our method can be deployed in the real world. Finally, <span class="dnerf">Text2Reward</span> further improves the policies by refining their reward functions with human feedback. 
           </p>
-          <!-- Compare <span class="dnerf">Binder</span> with:
-        <ul>
-          <li><strong>End2end & Chain-of-Thought:</strong> &nbsp More interpretable and robust!
-            <br><span class="dnerf">Binder</span> program is deterministically executed to entail the prediction/answer. </li>
-          <li><strong>Semantic Parsing & Code Generation:</strong> &nbsp Higher grammar coverage!
-            <br><span class="dnerf">Binder</span> injects Codex functionalities into SQL/Python to handle more diverse questions. </li>
-          <li><strong>Neural-symbolic Approach:</strong> &nbsp More general (domains), training-free, few annotations!
-            <br><span class="dnerf">Binder</span> is based on general programming languages (SQL/Python), and requires only a dozens in-context exemplar annotations. </li>
-        </ul> -->
+          <p></p>
         </div>
       </div>
     </div>
   </div>
     <!--/ Abstract. -->
-<!-- Paper video. -->
+    <!-- Paper video. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-three-fifths">
         <h3 class="title is-3">Video</h3>
         <p>Coming soon!</p>
         <!-- <div class="publication-video">
-          <iframe src="https://player.vimeo.com/video/760302884?h=61a3fa5973" width="640" height="400" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+          <iframe src="" width="640" height="400" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
         </div> -->
       </div>
     </div>
@@ -215,7 +226,7 @@
     <!-- Results. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h3 class="title is-3">Results</h3>
+        <h3 class="title is-3">Single-turn Results</h3>
         <div class="content has-text-justified">
           <p>
             We conduct systematic experiments on
@@ -319,10 +330,6 @@
             <div class="column">
               <div class="content">
                 <h6 class="title is-6">Zero-shot Push Chair</h6>
-                <!-- <p>
-                  Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-                  would be impossible without nerfies since it would require going through a wall.
-                </p> -->
                 <video id="zeroshot-video" autoplay controls muted loop playsinline height="100%">
                   <source src="./static/videos/zeroshot-PushChair.mp4"
                           type="video/mp4">
@@ -333,10 +340,6 @@
               <h6 class="title is-6">Few-shot Push Chair</h6>
               <div class="columns is-centered">
                 <div class="column content">
-                  <!-- <p>
-                    As a byproduct of our method, we can also solve the matting problem by ignoring
-                    samples that fall outside of a bounding box during rendering.
-                  </p> -->
                   <video id="fewshot-video" autoplay controls muted loop playsinline height="100%">
                     <source src="./static/videos/fewshot-PushChair.mp4"
                             type="video/mp4">
@@ -347,7 +350,8 @@
           </div>
 
           <h4 class="title is-4" align="left">Locomotion</h4>
-          <p><strong><span class="dnerf">Text2Reward</span> can learn novel locomotion behaviors.</strong> Table 1 shows the success rate of all six tasks trained with the reward generated under the zero-shot setting.</p>
+          <p><strong><span class="dnerf">Text2Reward</span> can learn novel locomotion behaviors.</strong> Corresponding video results are shown below. The results suggest that our method can generate dense reward functions for
+            RL training that generalize to novel locomotion tasks.</p>
           <section class="hero is-light is-small">
             <div class="hero-body">
               <div class="container">
@@ -477,42 +481,17 @@
         <h3 class="title is-3"><span class="dnerf">Text2Reward</span> Reward Code Samples</h3>
       </div>
     </div>
-    <!-- <img src="static/images/examples.png"> -->
-
   </div>
     <!--/ Examples. -->
 </section>
 
-<!-- <section class="section">
-  <div class="container is-max-desktop">
-    Copy our prompt from <a href="https://github.com/HKUNLP/Binder/blob/main/templates/prompts/wikitq_binder.txt">here</a> with your input (table, question etc.) on <a href="https://beta.openai.com/playground">OpenAI Playground</a> to generate Binder program by yourself!
-  </div>
-</section> -->
-  
-
-<!-- <iframe
-src="https://hkunlp-binder.hf.space"
-frameborder="0"
-width="850"
-height="450"
-/> -->
-
-
-
-<!-- <section class="section">
-  <div class="container is-max-desktop content">
-    <h2 class="title">Acknowledgement</h2>
-   We thank <a href="https://dpfried.github.io/">Daniel Fried</a>, <a href="https://hongjin-su.github.io/">Hongjin Su</a>, <a href="https://github.com/ChenWu98">Chen Henry Wu</a>, <a href="https://ryanzhumich.github.io/">Rui Zhang</a>, <a href="https://berlino.github.io/">Bailin Wang</a>, <a href="https://pcyin.me/">Pengcheng Yin</a>, <a href="https://homes.cs.washington.edu/~yizhongw/">Yizhong Wang</a>, <a href="https://weijia-shi.netlify.app/">Weijia Shi</a> for their helpful feedback on this work.
-  </div>
-</section> -->
-
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{Text2Reward,
+    <pre><code>@article{xie2023text2reward,
   title={Text2Reward: Automated Dense Reward Function Generation for Reinforcement Learning},
-  author={},
-  journal={arXiv},
+  author={Xie, Tianbao and Zhao, Siheng and Wu, Chen Henry and Liu, Yitao and Luo, Qian and Zhong, Victor and Yang, Yanchao and Yu, Tao},
+  journal={arXiv preprint arXiv:2309},
   year={2023}
 }</code></pre>
   </div>
